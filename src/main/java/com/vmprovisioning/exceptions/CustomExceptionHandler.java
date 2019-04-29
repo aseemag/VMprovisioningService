@@ -44,5 +44,14 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
 	        return new ResponseEntity(response,HttpStatus.BAD_REQUEST);
 
 	    }
+	 
+	 @ExceptionHandler(value=Exception.class)
+	    public final ResponseEntity<Object> genericExceptionHandler(Exception ex, WebRequest request) {
+	       ResponseDTO response=new ResponseDTO();
+	       response.setErrorMessage(ex.getMessage());
+	       response.setSuccess(false);
+	       response.setErrorCode(HttpStatus.INTERNAL_SERVER_ERROR.value());
+	        return new ResponseEntity(response,HttpStatus.INTERNAL_SERVER_ERROR);
+	    }
 
 }

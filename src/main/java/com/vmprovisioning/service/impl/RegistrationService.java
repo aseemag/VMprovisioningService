@@ -14,7 +14,7 @@ import com.vmprovisioning.exceptions.ValidationException;
 import com.vmprovisioning.models.Users;
 
 @Service
-public class RegistrationService {
+public class RegistrationService implements IRegistrationService{
 	private static Logger log=LoggerFactory.getLogger(RegistrationService.class);
 	@Autowired
 	private BCryptPasswordEncoder bCryptPasswordEncoder;

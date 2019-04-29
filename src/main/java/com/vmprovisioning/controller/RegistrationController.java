@@ -11,12 +11,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.vmprovisioning.dto.UsersDTO;
+import com.vmprovisioning.service.impl.IRegistrationService;
 import com.vmprovisioning.service.impl.RegistrationService;
 
 @RestController
 public class RegistrationController {
 	@Autowired
-	RegistrationService registrationService;
+	IRegistrationService registrationService;
 	
 	@RequestMapping(value = "/register/users", method = RequestMethod.POST)
     public ResponseEntity<String> registerUser(@Valid @RequestBody UsersDTO user) {
