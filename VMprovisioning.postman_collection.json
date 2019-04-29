@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "3b5085d9-c413-4711-8e57-c8ace440c44f",
+		"name": "VMprovisioning",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"er1235\",\n\t\"password\":\"admin\",\n\t\"emailAddress\":\"user_name@ref.com\",\n\t\"mobileNo\":9078979092\n\t\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/register/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"register",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "regerate otp",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"aseema67888\",\n\t\"password\":\"admin\"\n\t\n\t\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "vm request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhc2VlbWEiLCJleHAiOjE1NTcyMzI0NTN9.Bpw7hpON51fa3Y4KlQYBIlqMI9i4a_sNRN7dLMG5ARChvFm7r8RzEDPlRUFgrL3IfyMSATWjudaRzrNb063znA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"os\":\"linux\",\n\t\"ram\":\"4gb\",\n\t\"hardDisk\":\"1tb\",\n\t\"cpuCores\":1\n\t\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/1/requestVM",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"1",
+						"requestVM"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "vm request update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhc2VlbWEiLCJleHAiOjE1NTcyMzI0NTN9.Bpw7hpON51fa3Y4KlQYBIlqMI9i4a_sNRN7dLMG5ARChvFm7r8RzEDPlRUFgrL3IfyMSATWjudaRzrNb063znA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"os\":\"linux\",\n\t\"ram\":\"4gb\",\n\t\"hardDisk\":\"1tb\",\n\t\"cpuCores\":1,\n\t\"userId\":2\n\t\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/1/update",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"1",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get vm request",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhc2VlbWEiLCJleHAiOjE1NTczNzgzMTh9.HbCe4HFm8jriuY_oZOwmhR4pbzZn_S8FY-OB61TppxaJFKRfY4j50FjeTGjuB1qpR0Q59bzVMymwdCLP1gHWxw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/getVMRequests/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getVMRequests",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
